@@ -11,17 +11,17 @@ export default class CalledController {
     async create(request: Request, response: Response) {
         const trx = await db.transaction();
         const {
+            title,
             descriptions,
             created_at,
-            evaluation,
             id_categories,
         } = request.body;
 
         try {
             await trx('called').insert({
+                title,
                 descriptions,
                 created_at,
-                evaluation,
                 id_categories,
             })
 
