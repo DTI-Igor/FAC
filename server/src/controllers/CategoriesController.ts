@@ -5,6 +5,7 @@ export default class CategoriesController {
     async index(request: Request, response: Response){
         const categories = await db('categories');
 
+        console.log(categories);
         return response.json(categories);
     }
     async create(request: Request, response: Response) {

@@ -9,7 +9,7 @@ export interface Called {
     descriptions: string;
     created_at: string;
     evaluation: number;
-    id_categories: number;
+    descriptionsCategorie: string;
 }
 
 interface CalledItemProps{
@@ -22,12 +22,13 @@ const CalledItem: React.FC<CalledItemProps> = ({ called}) => {
             <header>
                 <h1><strong>{called.title}</strong></h1>
                 <div>
-                    <span>{called.id_categories}</span>
+                    <span>{called.descriptionsCategorie}</span>
                 </div>
             </header>
             <p>{called.descriptions}</p>
             <footer>
                 <p>Criado em: <strong>{called.created_at}</strong></p>
+                <p><strong>Anónimo</strong></p>
                 <p>Util<button><img src={CheckImg} alt=""/></button></p>
             </footer>
         </article>

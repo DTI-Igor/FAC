@@ -3,7 +3,7 @@ import db from '../database/connection';
 
 export default class CalledController {
     async index(request: Request, response: Response){
-        const calleds = await db('called');
+        const calleds = await db('called').select('called.title', 'called.descriptions', 'called.created_at', 'called.evaluation', 'categories.descriptions as descriptionsCategorie').join('categories', 'categories.id', '=', 'called.id_categories').orderBy('called.id', 'DESC');
 
         return response.json(calleds);
     }
