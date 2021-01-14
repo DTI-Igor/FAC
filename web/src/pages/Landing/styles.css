@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+
 #page-landing{
+    font-family: 'Roboto Slab', serif;
     width: 100vw;
     height: 40vw;
 
@@ -28,27 +31,6 @@
 .buttons-container {
     display: flex;
     justify-content: center;
-    /*margin: 3.2rem 0*/
-}
-
-.buttons-container a {
-    width: 30rem;
-    height: 7rem;
-    border-radius: 0.8rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-decoration: none;
-    color: white;
-    margin: 10px;
-    background-color: rgb(63, 144, 189);
-}
-
-.buttons-container a:hover{
-    color: black;
-    background-color: rgb(116, 186, 227);
 }
 
 @media (max-width: 700px){

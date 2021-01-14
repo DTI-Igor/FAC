@@ -15,10 +15,10 @@ function CalledList() {
 
     return (
         <div id="page-called-list" className="container">
-            <PageHeader title="Ocorrencias"/>
+            <PageHeader title="Lista de Manifestos Aberto"/>
             <main>
                 {calleds.map((called: Called) => {
-                    return <CalledItem key={called.id} called = {called}/>;
+                        return <CalledItem key={called.id} called = {called}/>;
                 })}
             </main>
         </div>

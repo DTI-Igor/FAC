@@ -1,0 +1,28 @@
+.card {
+    width: 25rem;
+    background-color: rgb(80, 149, 177);
+    color: white;
+    padding: 0.6rem;
+    margin: 0.2rem;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.card a {
+    text-decoration: none;
+    color: white;
+}
+
+.card:hover{
+    background-color: rgb(54, 77, 87);   
+}
+
+@media(max-width: 700px){
+    .card {
+        font-size: 87%;
+    }
+}

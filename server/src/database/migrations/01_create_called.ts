@@ -5,7 +5,7 @@ export async function up(Knex: Knex) {
         table.increments('id').primary();
         table.text('title').notNullable();
         table.text('descriptions').notNullable();
-        table.dateTime('created_at').notNullable();
+        table.timestamp('created_at').defaultTo(Knex.fn.now());
         table.integer('evaluation');
         table.integer('id_categories').references('id').inTable('categories').onUpdate('CASCADE').onDelete('CASCADE');
     });
